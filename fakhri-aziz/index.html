@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FakhLib | Elite Digital & Physical Archive</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2232/2232688.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="brand-logo">Fakh<span>Lib</span></div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">Collections</a></li>
+                <li><a href="#membership">Membership</a></li>
+                <li><a href="#location">Find Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="home" class="hero-section">
+        <div class="hero-overlay">
+            <h1>Empowering Minds, <br>Encapsulating History.</h1>
+            <p>Step into a world of curated knowledge and premium learning environments.</p>
+            <a href="#collection" class="btn-primary">Explore Catalog</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="values-grid">
+            <div class="value-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3389/3389081.png" alt="Digital Access">
+                <h3>Global Access</h3>
+                <p>Access over 50,000+ digital journals and e-books from anywhere in the world.</p>
+            </div>
+            <div class="value-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2702/2702134.png" alt="Study Space">
+                <h3>Elite Lounges</h3>
+                <p>Private study pods and noise-canceling zones for maximum productivity.</p>
+            </div>
+            <div class="value-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/10433/10433048.png" alt="Events">
+                <h3>Weekly Workshops</h3>
+                <p>Join our exclusive literature circles and technology seminars every weekend.</p>
+            </div>
+        </section>
+
+        <section id="collection" class="content-section">
+            <h2 class="section-title">Editor's Choice</h2>
+            <div class="book-gallery">
+                <div class="book-item">
+                    <img src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=400" alt="Philosophy">
+                    <h4>The Modern Thinker</h4>
+                    <span>Philosophy & Ethics</span>
+                </div>
+                <div class="book-item">
+                    <img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?auto=format&fit=crop&q=80&w=400" alt="Science">
+                    <h4>Astrophysics Vol. I</h4>
+                    <span>Science & Space</span>
+                </div>
+                <div class="book-item">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=400" alt="Law">
+                    <h4>Global Legislations</h4>
+                    <span>Law & Politics</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="membership" class="pricing-section">
+            <h2 class="section-title" style="color: white;">Membership Plans</h2>
+            <div class="price-container">
+                <div class="price-card" id="card-basic">
+                    <h3>Basic</h3>
+                    <p class="price">$0<span>/month</span></p>
+                    <ul>
+                        <li>Physical Book Borrowing</li>
+                        <li>Standard Reading Room</li>
+                        <li>Public Wi-Fi Access</li>
+                    </ul>
+                    <button class="btn-select" onclick="selectPlan('basic')">Select Plan</button>
+                </div>
+                <div class="price-card featured" id="card-elite">
+                    <div class="badge">Most Popular</div>
+                    <h3>Elite</h3>
+                    <p class="price">$15<span>/month</span></p>
+                    <ul>
+                        <li>Unlimited Digital Library</li>
+                        <li>Private Meeting Rooms</li>
+                        <li>Free Coffee & Snacks</li>
+                        <li>High-Speed 1Gbps Fiber</li>
+                    </ul>
+                    <button class="btn-select" onclick="selectPlan('elite')">Select Plan</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="location" class="contact-area">
+            <div class="contact-box">
+                <h2>Visit Our Headquarters</h2>
+                <p><strong>Address:</strong> Platinum District, 77th Avenue, New York, NY 10010</p>
+                <p><strong>Email:</strong> concierge@fakhlib.com</p>
+                <p><strong>Hours:</strong> Mon - Sun | 08:00 AM - 10:00 PM</p>
+                <div class="map-placeholder">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.617543444654!2d-73.9856555!3d40.7484405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sid!4v1700000000000" width="100%" height="250" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <p>© 2026 FakhLib International. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        function selectPlan(planType) {
+            // Reset all cards and buttons
+            document.querySelectorAll('.price-card').forEach(card => {
+                card.classList.remove('active-selection');
+            });
+            document.querySelectorAll('.btn-select').forEach(btn => {
+                btn.innerText = 'Select Plan';
+                btn.classList.remove('selected');
+            });
+
+            // Apply selected style
+            const selectedCard = document.getElementById('card-' + planType);
+            const selectedBtn = selectedCard.querySelector('.btn-select');
+            
+            selectedCard.classList.add('active-selection');
+            selectedBtn.innerText = 'Selected ✓';
+            selectedBtn.classList.add('selected');
+            
+            alert('You have chosen the ' + planType.toUpperCase() + ' plan!');
+        }
+    </script>
+
+</body>
+</html>
